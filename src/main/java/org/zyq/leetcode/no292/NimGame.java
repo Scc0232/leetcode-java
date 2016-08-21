@@ -27,9 +27,9 @@ public class NimGame {
         NimGame ng = new NimGame();
 
         output(0, ng.canWinNim(0));
-        output(0, ng.canWinNim(2));
-        output(0, ng.canWinNim(4));
-        output(0, ng.canWinNim(7));
-        output(0, ng.canWinNim(8));
+        output(2, ng.canWinNim(2));
+        output(4, ng.canWinNim(4));
+        output(7, ng.canWinNim(7));
+        output(8, ng.canWinNim(8));
     }
 }
