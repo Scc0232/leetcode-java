@@ -1,8 +1,6 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2016 All Rights Reserved.
- */
 package org.zyq.leetcode.no344;
+
+import static org.zyq.leetcode.util.LeetUtil.output;
 
 /**
  * 344. Reverse String
@@ -15,12 +13,8 @@ package org.zyq.leetcode.no344;
  * @author yuqing.zyq
  */
 public class ReverseString {
-    public static void reverse(String input) {
-        String output = doReverse(input);
-        System.out.printf("Input: \"%s\" , Output: \"%s\".\n", input, output);
-    }
 
-    private static String doReverse(String origin) {
+    public String reverseString(String origin) {
         if (origin == null || origin.length() == 0) {
             return "";
         }
@@ -37,15 +31,17 @@ public class ReverseString {
     }
 
     public static void main(String[] args) {
-        ReverseString.reverse(null);
-        ReverseString.reverse("");
-        ReverseString.reverse("   ");
-        ReverseString.reverse("null");
+        ReverseString rs = new ReverseString();
 
-        ReverseString.reverse("a");
-        ReverseString.reverse("ab");
-        ReverseString.reverse("abc");
-        ReverseString.reverse("abcd");
+        output(null, rs.reverseString(null));
+        output("", rs.reverseString(""));
+        output("   ", rs.reverseString("   "));
+        output("null", rs.reverseString("null"));
+
+        output("a", rs.reverseString("a"));
+        output("ab", rs.reverseString("ab"));
+        output("abc", rs.reverseString("abc"));
+        output("abcd", rs.reverseString("abcd"));
 
     }
 }
